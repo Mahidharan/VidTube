@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import healthCheckRouter from "./Routes/healthcheck.routes.js";
 
 const app = express();
 
@@ -13,4 +14,8 @@ app.use(
     credentials: true,
   }),
 );
+
+//Routes
+app.use("/api/v1/healthcheck", healthCheckRouter);
+
 export default app;
