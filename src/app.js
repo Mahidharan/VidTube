@@ -22,6 +22,6 @@ app.use(cookieParser());
 
 //Routes
 app.use("/api/v1/healthcheck", healthCheckRouter);
-app.use("/api/v1/register", userRoutes);
+app.use("/api/v1/users", userRoutes);
 
 export default app;
